@@ -1,26 +1,25 @@
-const request = require('request');
-const path = require('path');
-const express = require ('express');
+const request = require("request");
+const path = require("path");
+const express = require ("express");
 const app = express();
-// Defines a PORT for the server to listen for requests
-const PORT = 8080;
-
+//const apiRoutes = 
+// Defines a PORT for the server to listen for requests..this assigns a port to us
+const PORT = process.env.PORT || 8080;
+//require routes
+//const htmlRoutes = require ("./app/routing/htmlRoutes.js")
 
 app.use(express.static("app/public"))
 
 
-
-
-
-
+//app.use(express.urlencoded({extend:true})....add this 
 
 
 //require routes 
 
-require('./app/routing/apiRoutes')(app);
-require('./app/routing/htmlRoutes')(app);
+ require('./app/routing/apiRoutes')(app);
+ require('./app/routing/htmlRoutes')(app);
 
-// Starts our server on the predefined PORT
+// Starts our server on the predefined PORT...to remind us what port the app is running on
 app.listen(PORT, function(){
   console.log(`App is now listening on PORT ${PORT}`)
 })
