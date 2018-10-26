@@ -2,7 +2,6 @@ const express = require('express');
 
 const employeeList = require('../data/employee.js');
 
-
 module.exports = function (app) {
 
   // API Requests for /api/ employeeList
@@ -10,7 +9,7 @@ module.exports = function (app) {
   // GET Request
   // This will be used to display a JSON of all possible employees.
   app.get('/api/employees', function (req, res) {
-    console.log(employeeList);
+    //console.log(employeeList);
     res.json(employeeList);
   });
 
