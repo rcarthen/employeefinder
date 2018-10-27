@@ -1,4 +1,5 @@
 const express = require('express');
+const path= ('path');
 
 const employeeList = require('../data/employee.js');
 
@@ -15,10 +16,11 @@ module.exports = function (app) {
 
   // POST Request
   // POST routes /api/employees. This will be used to handle incoming survey results.
-  app.post('/api/employees', function (req, res) {
-    console.log(req.body);
-    res.redirect("/");
-  });
+  // app.post('/api/employees', function (req, res) {
+  //   console.log(req.body);
+  //   let randomUser= Math.floor(Math.random() * employeeList.length)
+  //   res.json(employeeList[randomUser]);
+
 
 
 

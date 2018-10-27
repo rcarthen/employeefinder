@@ -1,6 +1,9 @@
 
-$('.submit').on('click', function (event) {
-console.log("it works");
+$("#submit").on("click", function (event) {
+
+    event.preventDefault()
+    console.log("click works");
+
     const userInfo = {
         name: $("#name").val(),
         photo: $("#photo").val(),
@@ -14,10 +17,37 @@ console.log("it works");
             $("#question7").val(),
             $("#question8").val(),
             $("#question9").val(),
-            $("#quesstion10").val()
+            $("#question10").val()
+
         ]
-        }
 
-        //post ajax call ('/api/employess')
 
-    });
+    }
+    console.log(userInfo)
+
+   
+   $.ajax .then(function(response){
+        url: "api/employees",
+        method: post
+        data: 
+        
+
+
+)
+
+        });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
