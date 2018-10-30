@@ -24,21 +24,20 @@ $("#submit").on("click", function (event) {
 
     }
     console.log(userInfo)
+        $.ajax({
 
-   
-   $.ajax .then(function(response){
-        url: "api/employees",
-        method: post
-        data: 
+            url: "/api/employees",
+            method: "POST",
+            data:userInfo
+
         
-
-
-)
-
-        });
+        }).then(function(response){
+            $("#matchname").text(response.name);
+            $("#matchpic").attr("src", response.photo);
+        })
     
 
-
+    });
 
 
 

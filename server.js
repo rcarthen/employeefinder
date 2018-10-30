@@ -1,5 +1,3 @@
-const request = require("request");
-const path = require("path");
 const express = require("express");
 const app = express();
 //const apiRoutes = 
@@ -11,6 +9,8 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static("app/public"))
 app.use(express.urlencoded({ extend: true }));
 app.use(express.json())
+
+///
 
 //require routes 
 
